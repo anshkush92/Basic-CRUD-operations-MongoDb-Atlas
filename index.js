@@ -8,10 +8,6 @@ const app = express();
 const port = 3000 || process.env.PORT;
 
 // Test -------------------------- The Server Side Code ----------------------------------
-connection.once("open", () => {
-    console.log("Database connection established successfully");
-})
-
 app.get("/", (req, res, next) => {
     res.send(`<h1>Hello World</h1>`)
 })

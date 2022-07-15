@@ -8,12 +8,13 @@ const app = express();
 const port = 3000 || process.env.PORT;
 
 // Test --------------------------- Middlewares -----------------------------------------
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Test --------------------------- CRUD Operations on MongoDB Atlas --------------------
 app.post("/", async (req, res) => {
     const { userName, email, password } = req.body;
+    console.log(req.body);
 
     try {
         const newUser = await User.create({ userName, email, password });

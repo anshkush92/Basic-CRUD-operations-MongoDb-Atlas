@@ -7,10 +7,11 @@ require("dotenv").config()
 const dbString = process.env.DB_STRING;
 
 // Connecting to the mongoDB Atlas URL (Printing After Server Listening, because Async process takes time)
-const connection = mongoose.connect(dbString, {
-    useNewUrlParser: true,
-})
-    .then(() => console.log("Connected to MongoDB Atlas"))
-    .catch((err) => console.log(err));
+mongoose.connect(dbString, { useNewUrlParser: true });
+const connection = mongoose.connection;
+
+connection.once("open", () => {
+    console.log("Connected to MongoDB Atlas Successfully");
+});
 
 module.exports = connection;

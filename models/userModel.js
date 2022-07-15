@@ -5,18 +5,21 @@ const Schema = mongoose.Schema;
 const user = new Schema({
     userName: {
         type: String,
+        required: true,
     },
 
     email: {
         type: String,
+        required: true,
     },
 
     password: {
         type: String,
+        required: true,
     }
 });
 
 // This created a User table in which the data will be of this format (No-SQL analogy)
-const User = mongoose.model("usersTable", user);
+const User = mongoose.model("user", user);
 
 module.exports = User;

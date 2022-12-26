@@ -1,0 +1,4 @@
+- [Learn how to connect backend to MongoDB Atlas](https://www.youtube.com/watch?v=fchmYqGqnO4)
+- [Learn how to perform CRUD operation in MongoDB Atlas](https://www.youtube.com/watch?v=qRz5udg8zoE)
+- [Learn how to use Passport Js](https://www.youtube.com/watch?v=F-sFp_AvHc8)
+- [Passport Js Strategies](https://www.passportjs.org/)
